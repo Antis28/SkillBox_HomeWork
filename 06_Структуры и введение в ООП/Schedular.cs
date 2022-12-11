@@ -61,7 +61,7 @@ namespace _06_Структуры_и_введение_в_ООП
             {
                 note.AppendLine(PrepareFormat(record));
             }
-            using (StreamWriter sw = new StreamWriter(_path, true, _defaultEncoding))
+            using (StreamWriter sw = new StreamWriter(_path, false, _defaultEncoding))
             {
                 sw.Write(note);
             }
