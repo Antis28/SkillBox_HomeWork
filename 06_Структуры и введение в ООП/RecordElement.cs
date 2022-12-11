@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,6 +28,6 @@ namespace _06_Структуры_и_введение_в_ООП
         /// <summary>
         /// Место действия
         /// </summary>
-        public string Place { get;  set; }
+        public string Place { get;  set; }        
     }
 }
