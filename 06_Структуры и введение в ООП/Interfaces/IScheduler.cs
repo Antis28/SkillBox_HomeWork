@@ -13,7 +13,7 @@ internal interface IScheduler
     public void Load();
 
     public RecordElement GetRecord(int index);
-    public void AppendFromFile();
+    public void AppendFromFile(string path);
     public void SelectByDate();
     public void SortByField();
 }

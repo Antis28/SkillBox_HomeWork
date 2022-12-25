@@ -44,5 +44,44 @@ namespace _06_Структуры_и_введение_в_ООП_Test
                  }
              };
         }
+
+        public List<RecordElement> LoadFromFile(string path)
+        {
+            return new List<RecordElement>
+            {
+                new RecordElement
+                {
+                    Date = DateTime.Parse("01.01.2022"),
+                    EndDate = DateTime.Parse("01.01.2022"),
+                    Place = "Дом",
+                    Title = "1 Happy New Year!!!",
+                    Text = "Это тест 2-го ежедневника",
+                },
+                new RecordElement
+                {
+                    Date = DateTime.Parse("02.01.2022"),
+                    EndDate = DateTime.Parse("02.01.2022"),
+                    Place = "Дом",
+                    Title = "2 Happy New Year!!!",
+                    Text = "Это тест 2-го ежедневника",
+                },
+                new RecordElement
+                {
+                    Date = DateTime.Parse("03.01.2022"),
+                    EndDate = DateTime.Parse("03.01.2022"),
+                    Place = "Дом",
+                    Title = "3 Happy New Year!!!",
+                    Text = "Это тест 2-го ежедневника",
+                },
+                new RecordElement
+                {
+                    Date = DateTime.Parse("04.01.2022"),
+                    EndDate = DateTime.Parse("04.01.2022"),
+                    Place = "Дом",
+                    Title = "4 Happy New Year!!!",
+                    Text = "Это тест 2-го ежедневника",
+                },
+            };
+        }
     }
 }
