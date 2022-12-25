@@ -20,9 +20,9 @@ namespace _06_Структуры_и_введение_в_ООП_Test
                  new RecordElement
                  {
                      Date = DateTime.Parse("15.12.2022"),
-                     EndDate = DateTime.Parse("15.12.2022"),
-                     Place = "Дом",
-                     Title = "Не программировал",
+                     EndDate = DateTime.Parse("30.12.2022"),
+                     Place = "Водолечебница",
+                     Title = "Я не программировал",
                      Text = "Сегодня я сходил на процедуры. За программирование не садился",
                  },
                  new RecordElement
@@ -46,7 +46,7 @@ namespace _06_Структуры_и_введение_в_ООП_Test
                      Date = DateTime.Parse("25.12.2022"),
                      EndDate = DateTime.Parse("27.12.2022"),
                      Place = "Дом",
-                     Title = "Домашнее задание на ежедневник",
+                     Title = "А домашнее задание на ежедневник?",
                      Text = "Снова пытаюсь выполнить дз на ежедневник.\n" +
                             "Написал несколько тестов в Nunit для ускорения работы.",
                  }

@@ -17,5 +17,5 @@ internal interface IScheduler
     public RecordElement GetRecord(int index);
     public void AppendFromFile(string path);
     public List<RecordElement> SelectByDate(string date);
-    public void SortByField();
+    public List<RecordElement> SortByField(RecordField field);
 }
