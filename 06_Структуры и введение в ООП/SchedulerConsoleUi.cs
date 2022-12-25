@@ -15,7 +15,7 @@ namespace _06_Структуры_и_введение_в_ООП
             _scheduler = new Scheduler(mainPath);
         }   
         
-        internal SchedulerConsoleUi( Scheduler scheduler)
+        internal SchedulerConsoleUi( IScheduler scheduler)
         {
             _scheduler = scheduler;
         }
@@ -32,12 +32,6 @@ namespace _06_Структуры_и_введение_в_ООП
         internal void ShowRecords()
         {
             for (var i = 0; i < _scheduler.Count; i++) { ShowRecord(i); }
-        }
-
-        internal void ShowRecord(int index)
-        {
-            var record = _scheduler.GetRecord(index);
-            ShowRecord(record);
         }
 
         internal void RemoveRecord()
@@ -68,6 +62,12 @@ namespace _06_Структуры_и_введение_в_ООП
         }
 
         #region private
+        
+        private void ShowRecord(int index)
+        {
+            var record = _scheduler.GetRecord(index);
+            ShowRecord(record);
+        }
 
         private int SelectRecordByIndex()
         {
