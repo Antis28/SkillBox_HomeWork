@@ -35,6 +35,14 @@ namespace _06_Структуры_и_введение_в_ООП_Test
                  },
                  new RecordElement
                  {
+                     Date = DateTime.Parse("19.12.2022"),
+                     EndDate = DateTime.Parse("19.12.2022"),
+                     Place = "Дом",
+                     Title = "Пульт управления плеером с Android приложения",
+                     Text = "Пытался оптимизировать UI в мобильном клиенте. Клиент стал меньше тормозить.",
+                 },
+                 new RecordElement
+                 {
                      Date = DateTime.Parse("25.12.2022"),
                      EndDate = DateTime.Parse("27.12.2022"),
                      Place = "Дом",

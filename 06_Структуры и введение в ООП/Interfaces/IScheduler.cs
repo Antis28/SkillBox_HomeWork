@@ -1,4 +1,6 @@
-﻿namespace _06_Структуры_и_введение_в_ООП;
+﻿using System.Collections.Generic;
+
+namespace _06_Структуры_и_введение_в_ООП;
 
 internal interface IScheduler
 {
@@ -14,6 +16,6 @@ internal interface IScheduler
 
     public RecordElement GetRecord(int index);
     public void AppendFromFile(string path);
-    public void SelectByDate();
+    public List<RecordElement> SelectByDate(string date);
     public void SortByField();
 }
