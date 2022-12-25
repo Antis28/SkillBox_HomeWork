@@ -7,7 +7,7 @@ namespace _06_Структуры_и_введение_в_ООП;
 
 internal class LoadProvider : ILoadProvider
 {
-    private readonly string _path;
+    private string _path;
     private readonly Encoding _defaultEncoding;
 
     public LoadProvider(string path,Encoding defaultEncoding )
@@ -43,5 +43,11 @@ internal class LoadProvider : ILoadProvider
             }
         }
         return recordElements;
+    }
+
+    public List<RecordElement> LoadFromFile(string path)
+    {
+        _path = path;
+        return LoadFromFile();
     }
 }

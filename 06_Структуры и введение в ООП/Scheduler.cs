@@ -30,41 +30,23 @@ namespace _06_Структуры_и_введение_в_ООП
             _saveProvider = saveProvider;
         }
 
-        public readonly void AddRecord(RecordElement record)
+        public readonly void AddRecord(RecordElement record) => _records.Add(record);
+
+        public void RemoveRecord(RecordElement record) => _records.Remove(record);
+
+        public void RemoveRecord(int index) => _records.RemoveAt(index);
+
+
+        public void EditRecord(int index, RecordElement record) => _records[index] = record;
+
+        public void Save() => _saveProvider.SaveToFile(_records);
+
+
+        public void Load() => _records = _loadProvider.LoadFromFile();
+
+        public void AppendFromFile(string path)
         {
-            _records.Add(record);
-        }
-
-        public void RemoveRecord(RecordElement record)
-        {
-            _records.Remove(record);
-        }
-
-        public void RemoveRecord(int index)
-        {
-            _records.RemoveAt(index);
-        }
-
-
-        public void EditRecord(int index, RecordElement record)
-        {
-            _records[index] = record;
-        }
-
-        public void Save()
-        {
-            _saveProvider.SaveToFile(_records);
-        }
-
-
-        public void Load()
-        {
-            _records = _loadProvider.LoadFromFile();
-        }
-
-        public void AppendFromFile()
-        {
-            throw new NotImplementedException();
+            _records.AddRange(_loadProvider.LoadFromFile(path));
         }
 
         public void SelectByDate()
@@ -77,9 +59,6 @@ namespace _06_Структуры_и_введение_в_ООП
             throw new NotImplementedException();
         }
 
-        public RecordElement GetRecord(int index)
-        {
-            return _records[index];
-        }
+        public RecordElement GetRecord(int index) => _records[index];
     }
 }
