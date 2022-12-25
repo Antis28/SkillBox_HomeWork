@@ -48,11 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IScheduler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecordElement.cs" />
-    <Compile Include="Schedular.cs" />
-    <Compile Include="SchedularConsolUI.cs" />
+    <Compile Include="Scheduler.cs" />
+    <Compile Include="SchedulerConsoleUi.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

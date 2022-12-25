@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_Структуры и введение в ООП", "06_Структуры и введение в ООП\06_Структуры и введение в ООП.csproj", "{93D44CA4-FF93-47F4-80B4-A836D686B319}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06_Структуры и введение в ООП_Test", "06_Структуры и введение в ООП_Test\06_Структуры и введение в ООП_Test.csproj", "{514BEEB7-5833-4733-9FCC-15D3330BBE9C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{93D44CA4-FF93-47F4-80B4-A836D686B319}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93D44CA4-FF93-47F4-80B4-A836D686B319}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93D44CA4-FF93-47F4-80B4-A836D686B319}.Release|Any CPU.Build.0 = Release|Any CPU
+		{514BEEB7-5833-4733-9FCC-15D3330BBE9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{514BEEB7-5833-4733-9FCC-15D3330BBE9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{514BEEB7-5833-4733-9FCC-15D3330BBE9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{514BEEB7-5833-4733-9FCC-15D3330BBE9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
