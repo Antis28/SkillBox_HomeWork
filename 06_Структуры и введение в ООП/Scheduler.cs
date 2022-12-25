@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace _06_Структуры_и_введение_в_ООП
@@ -49,9 +50,13 @@ namespace _06_Структуры_и_введение_в_ООП
             _records.AddRange(_loadProvider.LoadFromFile(path));
         }
 
-        public void SelectByDate()
+        public List<RecordElement> SelectByDate(string date)
         {
-            throw new NotImplementedException();
+            var selectData = DateTime.Parse("19.12.2022");
+            var res = from rec in _records
+                      where rec.Date == selectData
+                      select rec;
+            return res.ToList();
         }
 
         public void SortByField()
