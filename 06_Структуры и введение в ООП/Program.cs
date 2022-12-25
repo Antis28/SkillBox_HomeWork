@@ -28,11 +28,11 @@ namespace _06_Структуры_и_введение_в_ООП
 
         static void Main(string[] args)
         {
-            var schedular = new SchedularConsolUI("");
+            var scheduler = new SchedulerConsoleUi("");
 
 
             var greatings = "Добро пожаловать выберите действие";
-            var menu = ConstructMainMenu(schedular, greatings);
+            var menu = ConstructMainMenu(scheduler, greatings);
 
             while (!isExit)
             {
@@ -40,7 +40,7 @@ namespace _06_Структуры_и_введение_в_ООП
             }
         }
 
-        private static Menu ConstructMainMenu(SchedularConsolUI schedular, string greatings)
+        private static Menu ConstructMainMenu(SchedulerConsoleUi scheduler, string greatings)
         {
             var menuItems = new MenuItem[]
             {
@@ -48,7 +48,7 @@ namespace _06_Структуры_и_введение_в_ООП
                 {
                     Text = "Показать все записи",
                     Command = () =>{
-                       schedular.ShowRecords();
+                       scheduler.ShowRecords();
                        Console.ReadKey();
                     }
                 },
@@ -56,34 +56,34 @@ namespace _06_Структуры_и_введение_в_ООП
                 {
                     Text = "Создать новую запись",
                     Command = () =>{
-                        schedular.NewRecord();
+                        scheduler.NewRecord();
                     }
                 },
                 new MenuItem
                 { Text = "Удалить запись",
                     Command =() => {
-                        schedular.RemoveRecord();
+                        scheduler.RemoveRecord();
                     }
                 },
                  new MenuItem
                  {
                      Text = "Редактировать запись",
                      Command = () => {
-                        schedular.EditRecord();
+                        scheduler.EditRecord();
                     }
                  },
                  new MenuItem
                  {
                      Text = "Сохранить",
                      Command = () => {
-                        schedular.Save();
+                        scheduler.Save();
                     }
                  },
                  new MenuItem
                  {
                      Text = "Загрузить",
                     Command =() => {
-                       schedular.Load();
+                       scheduler.Load();
                     }
                  },
                  new MenuItem

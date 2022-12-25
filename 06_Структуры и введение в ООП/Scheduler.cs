@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace _06_Структуры_и_введение_в_ООП
 {
-    internal struct Schedular
+    internal struct Scheduler : IScheduler
     {
-        internal int Count => _records.Count;
+        public int Count => _records.Count;
 
         private string _path;
         private List<RecordElement> _records;
         private Encoding _defaultEncoding;
 
-        public Schedular(string path)
+        public Scheduler(string path)
         {
             _path = path;
             _path = "db.csv";
@@ -24,7 +24,7 @@ namespace _06_Структуры_и_введение_в_ООП
             _records = LoadFromFile(_path);
         }
 
-        public void AddRecord(RecordElement record) 
+        public readonly void AddRecord(RecordElement record) 
         {
             _records.Add(record);
         }
@@ -51,8 +51,13 @@ namespace _06_Структуры_и_введение_в_ООП
         public void Load() { LoadFromFile(_path); }
         public void AppendFromFile() { throw new NotImplementedException(); }
         public void SelectByDate() { throw new NotImplementedException(); }
-        public void SortByFild() { throw new NotImplementedException(); }
+        public void SortByField() { throw new NotImplementedException(); }
 
+        public RecordElement GetRecord(int index)
+        {
+            return _records[index];
+        }       
+        
         private void SaveToFile()
         {
             var note = new StringBuilder();
@@ -113,11 +118,6 @@ namespace _06_Структуры_и_введение_в_ООП
             }
             return recordElements;
         }
-       
-        internal RecordElement GetRecord(int index)
-        {
-            return _records[index];
-        }       
        
     }
 }
