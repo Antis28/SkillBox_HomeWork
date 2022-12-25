@@ -1,4 +1,19 @@
-﻿using System;
+﻿/*
+ Разработать ежедневник
++ создание
++ удаление
++ редактирование
+записей
+
+Возможности:
++ загрузки/сохранения из/в файл
+- добавление данных в текущий ежедневник из выбранного файла
+- импорт по выбранному диапазону дат
+- упорядочивание записей по выбранному полю
+ */
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,13 +24,24 @@ namespace _06_Структуры_и_введение_в_ООП
 {
     internal class Program
     {
+        private static bool isExit = false;
+
         static void Main(string[] args)
         {
-            var isExit = false;
             var schedular = new SchedularConsolUI("");
 
 
             var greatings = "Добро пожаловать выберите действие";
+            var menu = ConstructMainMenu(schedular, greatings);
+
+            while (!isExit)
+            {
+                menu.ShowMenu();
+            }
+        }
+
+        private static Menu ConstructMainMenu(SchedularConsolUI schedular, string greatings)
+        {
             var menuItems = new MenuItem[]
             {
                 new MenuItem
@@ -69,13 +95,8 @@ namespace _06_Структуры_и_введение_в_ООП
                  },
             };
             var menu = Menu.CreateMenu(greatings, menuItems);
-
-            while (!isExit)
-            {
-                menu.ShowMenu();
-            }
+            return menu;
         }
-
 
     }
 }
